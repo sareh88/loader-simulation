@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "loader-simulation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "jshint && mkdirp docs && cp index.html docs/",
+    "build": "browserify index.js -o docs/bundle.js && node-sass style.scss docs/style.css",
+    "test": "jshint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sareh88/loader-simulation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sareh88/loader-simulation/issues"
+  },
+  "homepage": "https://github.com/sareh88/loader-simulation#readme",
+  "devDependencies": {
+    "jshint": "latest",
+    "simulate-progress": "zeropaper/xt-simulate-progress",
+    "browserify": "^14.4.0",
+    "cp": "^0.2.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.3"
+  }
+  
+}
